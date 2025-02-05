@@ -10,8 +10,8 @@
             background-color: #1a1a1a;
             color: #fff;
             font-family: 'Arial', sans-serif;
-            overflow-x: hidden;
             margin: 0;
+            padding: 0;
         }
 
         /* Hero Section */
@@ -19,18 +19,11 @@
             background: linear-gradient(135deg, #8e2de2, #4a00e0);
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 20px;
-        }
-
-        .hero-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            max-width: 1200px;
+            padding: 40px 20px;
+            text-align: center;
         }
 
         .logo {
@@ -51,6 +44,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s;
             box-shadow: 0 0 15px rgba(255, 0, 204, 0.7);
             display: inline-block;
+            margin-top: 20px;
         }
 
         .cta-btn:hover {
@@ -67,7 +61,7 @@
         /* Video Section */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
             height: 0;
             overflow: hidden;
             max-width: 800px;
@@ -105,17 +99,10 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <img src="https://github.com/AmbientPixels/cools-website/blob/main/swirl-400.png?raw=true" alt="$COOLS Logo" class="logo" />
-
-            <div>
-                <h1 class="text-5xl font-bold">INSERT COIN...STACK $COOLS</h1>
-                <p class="text-xl mt-4">Where Nostalgia Meets the Blockchain 🚀</p>
-                <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn mt-6">BUY $COOLS</a>
-            </div>
-
-            <img src="https://github.com/AmbientPixels/cools-website/blob/main/swirl-400.png?raw=true" alt="$COOLS Logo" class="logo" />
-        </div>
+        <img src="https://github.com/AmbientPixels/cools-website/blob/main/swirl-400.png?raw=true" alt="$COOLS Logo" class="logo" />
+        <h1 class="text-5xl font-bold">INSERT COIN...STACK $COOLS</h1>
+        <p class="text-xl mt-4">Where Nostalgia Meets the Blockchain 🚀</p>
+        <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn mt-6">BUY $COOLS</a>
     </section>
 
     <!-- About Section -->
@@ -128,7 +115,16 @@
     <section class="section">
         <h2 class="text-4xl font-bold">Check Out Our Stinger Video 🎬</h2>
         <div class="video-container mt-6">
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/HRBdaAuxhnA?si=eryBHs7XRUn7yRf6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/HRBdaAuxhnA?si=13kq7HFI6fiDGVHT" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
         </div>
     </section>
 
