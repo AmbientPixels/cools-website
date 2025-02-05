@@ -38,16 +38,16 @@
         /* Hero CTA Button */
         .hero-overlay {
             position: absolute;
-            bottom: 15%; /* Aligned perfectly with the video */
+            bottom: 15%;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
-            opacity: 0; /* Hidden by default */
-            transition: opacity 1s ease-in-out; /* Smooth fade-in */
+            opacity: 0; 
+            transition: opacity 1s ease-in-out;
         }
 
         .hero-overlay.show {
-            opacity: 1; /* Show CTA after 8 seconds */
+            opacity: 1;
         }
 
         /* Gradient Rounded Button */
@@ -68,6 +68,24 @@
         .cta-btn:hover {
             transform: scale(1.1);
             box-shadow: 0 0 25px rgba(255, 0, 204, 1);
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
         }
 
         /* About Section */
@@ -96,7 +114,7 @@
 
         /* Bottom CTA Section */
         .cta-section {
-            padding: 80px 20px; /* Added padding for space */
+            padding: 80px 20px;
             background: linear-gradient(135deg, #111, #000);
         }
 
@@ -104,7 +122,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px; /* Space between text and button */
+            gap: 20px;
         }
 
         /* Responsive Design */
@@ -123,7 +141,12 @@
             }
 
             .cta-section {
-                padding: 60px 20px; /* Adjust spacing for mobile */
+                padding: 60px 20px;
+            }
+
+            .social-icons img {
+                width: 35px;
+                height: 35px;
             }
         }
     </style>
@@ -132,7 +155,7 @@
 
     <!-- Hero Section with Fullscreen Video Background -->
     <section class="hero">
-        <video autoplay muted playsinline id="heroVideo"> <!-- No loop -->
+        <video autoplay muted playsinline id="heroVideo"> 
             <source src="https://github.com/AmbientPixels/cools-website/raw/refs/heads/main/light-logo-reveal.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -140,6 +163,19 @@
         <!-- Gradient Rounded CTA Button (Hidden Initially) -->
         <div class="hero-overlay" id="ctaOverlay">
             <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn">BUY $COOLS</a>
+
+            <!-- Social Icons (Hero Section) -->
+            <div class="social-icons">
+                <a href="https://x.com/TheCoolScoin" target="_blank">
+                    <img src="https://github.com/AmbientPixels/cools-website/blob/main/logo-white.png?raw=true" alt="X Logo">
+                </a>
+                <a href="https://t.me/COOLSCommunity" target="_blank">
+                    <img src="https://github.com/AmbientPixels/cools-website/blob/main/Telegram-Logo.png?raw=true" alt="Telegram Logo">
+                </a>
+                <a href="https://discord.com/" target="_blank">
+                    <img src="https://github.com/AmbientPixels/cools-website/blob/main/icon_clyde_white_RGB.png?raw=true" alt="Discord Logo">
+                </a>
+            </div>
         </div>
     </section>
 
@@ -166,12 +202,25 @@
         </div>
     </section>
 
-    <!-- Call-to-Action Section (Fixed Overlap Issue) -->
+    <!-- Call-to-Action Section -->
     <section class="cta-section">
         <div class="cta-content">
             <h2 class="text-4xl font-bold">Join the $COOLS Movement 🚀</h2>
             <p class="mt-4 text-lg">Don't just hold. STACK. 💎🙌</p>
             <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn">STACK $COOLS NOW</a>
+
+            <!-- Social Icons (Bottom CTA) -->
+            <div class="social-icons">
+                <a href="https://x.com/TheCoolScoin" target="_blank">
+                    <img src="https://github.com/AmbientPixels/cools-website/blob/main/logo-white.png?raw=true" alt="X Logo">
+                </a>
+                <a href="https://t.me/COOLSCommunity" target="_blank">
+                    <img src="https://github.com/AmbientPixels/cools-website/blob/main/Telegram-Logo.png?raw=true" alt="Telegram Logo">
+                </a>
+                <a href="https://discord.com/" target="_blank">
+                    <img src="https://github.com/AmbientPixels/cools-website/blob/main/icon_clyde_white_RGB.png?raw=true" alt="Discord Logo">
+                </a>
+            </div>
         </div>
     </section>
 
@@ -185,7 +234,7 @@
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('ctaOverlay').classList.add('show');
-            }, 8000); // Show CTA after 8 seconds
+            }, 8000); 
         });
     </script>
 
