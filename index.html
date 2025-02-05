@@ -35,7 +35,7 @@
             z-index: -1;
         }
 
-        /* Transparent CTA Button */
+        /* CTA Button - No Background Container */
         .hero-overlay {
             position: absolute;
             bottom: 5%; /* Moved further down */
@@ -50,21 +50,24 @@
             opacity: 1; /* Show after 8 seconds */
         }
 
+        /* Gradient Rounded Button */
         .cta-btn {
-            background: transparent; /* Fully transparent */
-            color: #fff; /* White text */
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
+            background: linear-gradient(135deg, #ff00cc, #00ccff);
+            color: #fff;
+            padding: 15px 40px;
             border: none;
-            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.5rem;
             cursor: pointer;
-            transition: transform 0.3s ease, text-shadow 0.3s;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s;
+            box-shadow: 0 0 15px rgba(255, 0, 204, 0.7);
         }
 
         .cta-btn:hover {
             transform: scale(1.1);
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 25px rgba(255, 0, 204, 1);
         }
 
         /* About Section */
@@ -99,7 +102,7 @@
 
             .cta-btn {
                 font-size: 1.2rem;
-                padding: 12px 20px;
+                padding: 12px 30px;
             }
 
             .about-section h2 {
@@ -117,7 +120,7 @@
             Your browser does not support the video tag.
         </video>
 
-        <!-- Transparent CTA Button (Hidden Initially) -->
+        <!-- Gradient Rounded CTA Button (Hidden Initially) -->
         <div class="hero-overlay" id="ctaOverlay">
             <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn">BUY $COOLS</a>
         </div>
