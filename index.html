@@ -14,28 +14,49 @@
             padding: 0;
         }
 
-        /* Hero Section */
+        /* Hero Section (Fullscreen Video Background) */
         .hero {
-            background: linear-gradient(135deg, #8e2de2, #4a00e0);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Overlay with Transparent Background */
+        .hero-overlay {
+            position: absolute;
+            bottom: 15%;
+            left: 50%;
+            transform: translateX(-50%);
             text-align: center;
+            background: rgba(0, 0, 0, 0.4); /* Transparent black */
+            padding: 20px 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
         }
 
-        .logo {
-            width: 350px; /* Larger Logo */
-            max-width: 90%;
+        /* Subheadline (Smaller Text) */
+        .hero-overlay h2 {
+            font-size: 1.2rem; /* Smaller subheadline */
+            margin-bottom: 5px;
+            color: #ccc;
+            font-weight: normal;
         }
 
-        h1, p {
-            margin: 10px 0;
-        }
-
-        /* CTA Button */
+        /* Main CTA Button */
         .cta-btn {
             background: linear-gradient(135deg, #ff00cc, #00ccff);
             padding: 15px 40px;
@@ -44,7 +65,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s;
             box-shadow: 0 0 15px rgba(255, 0, 204, 0.7);
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         .cta-btn:hover {
@@ -52,73 +73,66 @@
             box-shadow: 0 0 25px rgba(255, 0, 204, 1);
         }
 
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #8e2de2, #4a00e0);
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .about-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Tokenomics Section */
         .section {
             padding: 60px 20px;
             text-align: center;
             background: linear-gradient(135deg, #222, #111);
         }
 
-        /* Minimalist Stinger Video Section */
-        .stinger-section {
-            padding: 0;
-            background: #000;
-            text-align: center;
-        }
-
-        .video-wrapper {
-            position: relative;
-            overflow: hidden;
-            max-width: 100%;
-            margin: 0 auto;
-        }
-
-        .video-wrapper video {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
-            .logo {
-                width: 250px; /* Adjusted for Mobile */
-            }
-
-            h1 {
-                font-size: 2rem;
+            .hero-overlay h2 {
+                font-size: 1rem;
             }
 
             .cta-btn {
                 padding: 12px 30px;
+            }
+
+            .about-section h2 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Fullscreen Video Background -->
     <section class="hero">
-        <img src="https://github.com/AmbientPixels/cools-website/blob/main/swirl-400.png?raw=true" alt="$COOLS Logo" class="logo" />
-        <h1 class="text-5xl font-bold">INSERT COIN...STACK $COOLS</h1>
-        <p class="text-xl mt-4">Where Nostalgia Meets the Blockchain 🚀</p>
-        <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn mt-6">BUY $COOLS</a>
+        <video autoplay loop muted playsinline>
+            <source src="https://github.com/AmbientPixels/cools-website/raw/refs/heads/main/light-logo-reveal.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Transparent Overlay with Subheadline & CTA -->
+        <div class="hero-overlay">
+            <h2>Where Nostalgia Meets the Blockchain 🚀</h2>
+            <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn">BUY $COOLS</a>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section class="section">
-        <h2 class="text-4xl font-bold">What is $COOLS?</h2>
-        <p class="mt-4 text-lg">Inspired by the legendary Cool S, $COOLS blends nostalgia with crypto vibes. It’s more than a coin—it's a movement fueled by creativity and community. 🎨✨</p>
-    </section>
-
-    <!-- Stinger Video Section (Minimalist Style) -->
-    <section class="stinger-section">
-        <div class="video-wrapper">
-            <video autoplay loop muted playsinline>
-                <source src="https://github.com/AmbientPixels/cools-website/raw/refs/heads/main/light-logo-reveal.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+    <section class="about-section">
+        <h2>What is $COOLS?</h2>
+        <p>Inspired by the legendary Cool S, $COOLS blends nostalgia with crypto vibes. It’s more than a coin—it's a movement fueled by creativity and community. 🎨✨</p>
     </section>
 
     <!-- Tokenomics Section -->
