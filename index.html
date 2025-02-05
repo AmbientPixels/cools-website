@@ -8,62 +8,146 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-color: #1a1a1a; 
-            color: #fff; 
-            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
         }
-        .parallax-bg {
-            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+
+        /* Hero Section Gradient */
+        .hero {
+            background: linear-gradient(135deg, #8e2de2, #4a00e0);
             height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
         }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px; /* Space between logos and text */
+            flex-wrap: wrap; /* Makes it responsive for mobile */
+        }
+
+        .logo {
+            width: 150px;
+            margin: 10px;
+        }
+
+        /* CTA Button */
         .cta-btn {
-            background: linear-gradient(135deg, #00f260, #0575e6);
+            background: linear-gradient(135deg, #ff00cc, #00ccff);
             padding: 15px 30px;
-            border-radius: 25px;
+            border-radius: 30px;
             font-weight: bold;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s;
+            box-shadow: 0 0 15px rgba(255, 0, 204, 0.7);
         }
+
         .cta-btn:hover {
             transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(255, 0, 204, 1);
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #222, #111);
+        }
+
+        /* Video Styling */
+        .video-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 4px solid #ff00cc;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 0, 204, 0.5);
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                width: 100px; /* Resize logos on smaller screens */
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <section class="parallax-bg rellax" data-rellax-speed="-2">
-        <div class="flex flex-col items-center justify-center h-screen text-center">
-            <h1 class="text-5xl font-bold">INSERT COIN...STACK $COOLS</h1>
-            <p class="text-xl mt-4">Where Nostalgia Meets the Blockchain 🚀</p>
-            <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn mt-6">BUY $COOLS</a>
+    <!-- Hero Section with Logos on Both Sides -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Left Logo -->
+            <img src="https://github.com/AmbientPixels/cools-website/blob/main/swirl-400.png?raw=true" alt="$COOLS Logo" class="logo" />
+
+            <!-- Centered Copy -->
+            <div>
+                <h1 class="text-5xl font-bold">INSERT COIN...STACK $COOLS</h1>
+                <p class="text-xl mt-4">Where Nostalgia Meets the Blockchain 🚀</p>
+                <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn mt-6">BUY $COOLS</a>
+            </div>
+
+            <!-- Right Logo -->
+            <img src="https://github.com/AmbientPixels/cools-website/blob/main/swirl-400.png?raw=true" alt="$COOLS Logo" class="logo" />
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="py-20 px-8 text-center">
+    <section class="section">
         <h2 class="text-4xl font-bold">What is $COOLS?</h2>
         <p class="mt-4 text-lg">Inspired by the legendary Cool S, $COOLS blends nostalgia with crypto vibes. It’s more than a coin—it's a movement fueled by creativity and community.</p>
     </section>
 
+ <!-- Stinger Video Section -->
+<section class="section">
+    <h2 class="text-4xl font-bold">Check Out Our Stinger Video 🎬</h2>
+    <div class="video-container mt-6">
+        <!-- Replace YOUR_VIDEO_ID with your actual YouTube video ID -->
+        <iframe 
+            width="100%" 
+            height="450" 
+            src="https://www.youtube.com/watch?v=HRBdaAuxhnA" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+
     <!-- Tokenomics Section -->
-    <section class="bg-gray-800 py-20 px-8 text-center">
+    <section class="section">
         <h2 class="text-4xl font-bold">Tokenomics</h2>
         <p class="mt-4 text-lg">Max Supply: 1,000,000,000 $COOLS<br>Community-Driven | No Presale | 100% Transparency</p>
+        <img src="assets/tokenomics-icon.png" alt="Tokenomics Icon" class="mx-auto mt-6" />
     </section>
 
     <!-- Roadmap Section -->
-    <section class="py-20 px-8 text-center">
+    <section class="section bg-gray-900">
         <h2 class="text-4xl font-bold">Roadmap 🚀</h2>
         <div class="mt-6 space-y-4">
             <p>✅ Phase 1: Launch & Hype</p>
             <p>✅ Phase 2: Community Growth & Contests</p>
             <p>✅ Phase 3: Partnerships & Listings</p>
             <p>🔜 Phase 4: World Domination (or close enough)</p>
+            <img src="assets/roadmap-icon.png" alt="Roadmap Icon" class="mx-auto mt-4" />
         </div>
     </section>
 
     <!-- Call-to-Action Section -->
-    <section class="bg-gray-900 py-20 px-8 text-center">
+    <section class="section">
         <h2 class="text-4xl font-bold">Join the $COOLS Movement</h2>
         <p class="mt-4 text-lg">Don't just hold. STACK. 🚀</p>
         <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn mt-6">STACK $COOLS NOW</a>
