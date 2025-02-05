@@ -35,10 +35,10 @@
             z-index: -1;
         }
 
-        /* Hero CTA Button - Final Alignment */
+        /* CTA Button - No Background Container */
         .hero-overlay {
             position: absolute;
-            bottom: 15%; /* Adjusted for perfect alignment */
+            bottom: 5%; /* Moved further down */
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
@@ -47,7 +47,7 @@
         }
 
         .hero-overlay.show {
-            opacity: 1; /* Show CTA after 8 seconds */
+            opacity: 1; /* Show after 8 seconds */
         }
 
         /* Gradient Rounded Button */
@@ -94,15 +94,10 @@
             background: linear-gradient(135deg, #222, #111);
         }
 
-        /* Bottom CTA Container for Better Control */
-        .cta-container {
-            margin-top: 50px; /* Added margin to prevent overlap */
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero-overlay {
-                bottom: 10%;
+                bottom: 3%;
             }
 
             .cta-btn {
@@ -112,10 +107,6 @@
 
             .about-section h2 {
                 font-size: 2rem;
-            }
-
-            .cta-container {
-                margin-top: 30px; /* Adjusted spacing for mobile */
             }
         }
     </style>
@@ -158,13 +149,11 @@
         </div>
     </section>
 
-    <!-- Call-to-Action Section with Dedicated Container -->
-    <section class="section cta-container">
+    <!-- Call-to-Action Section -->
+    <section class="section">
         <h2 class="text-4xl font-bold">Join the $COOLS Movement 🚀</h2>
         <p class="mt-4 text-lg">Don't just hold. STACK. 💎🙌</p>
-        <div class="cta-wrapper">
-            <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn">STACK $COOLS NOW</a>
-        </div>
+        <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn mt-6">STACK $COOLS NOW</a>
     </section>
 
     <!-- Footer -->
