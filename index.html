@@ -35,10 +35,10 @@
             z-index: -1;
         }
 
-        /* Hero CTA Button - Adjusted Position */
+        /* Hero CTA Button - Final Alignment */
         .hero-overlay {
             position: absolute;
-            bottom: 18%; /* Adjusted for better alignment */
+            bottom: 15%; /* Adjusted for perfect alignment */
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
@@ -94,15 +94,15 @@
             background: linear-gradient(135deg, #222, #111);
         }
 
-        /* Bottom CTA Adjustment */
-        .cta-btn.mt-6 {
-            margin-top: 40px; /* Prevent overlap with paragraph text */
+        /* Bottom CTA Container for Better Control */
+        .cta-container {
+            margin-top: 50px; /* Added margin to prevent overlap */
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero-overlay {
-                bottom: 10%; /* Adjusted for smaller screens */
+                bottom: 10%;
             }
 
             .cta-btn {
@@ -112,6 +112,10 @@
 
             .about-section h2 {
                 font-size: 2rem;
+            }
+
+            .cta-container {
+                margin-top: 30px; /* Adjusted spacing for mobile */
             }
         }
     </style>
@@ -154,11 +158,13 @@
         </div>
     </section>
 
-    <!-- Call-to-Action Section -->
-    <section class="section">
+    <!-- Call-to-Action Section with Dedicated Container -->
+    <section class="section cta-container">
         <h2 class="text-4xl font-bold">Join the $COOLS Movement 🚀</h2>
         <p class="mt-4 text-lg">Don't just hold. STACK. 💎🙌</p>
-        <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn mt-6">STACK $COOLS NOW</a>
+        <div class="cta-wrapper">
+            <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn">STACK $COOLS NOW</a>
+        </div>
     </section>
 
     <!-- Footer -->
