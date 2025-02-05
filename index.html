@@ -35,10 +35,10 @@
             z-index: -1;
         }
 
-        /* CTA Button - No Background Container */
+        /* Hero CTA Button - Adjusted Position */
         .hero-overlay {
             position: absolute;
-            bottom: 5%; /* Moved further down */
+            bottom: 18%; /* Adjusted for better alignment */
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
@@ -47,7 +47,7 @@
         }
 
         .hero-overlay.show {
-            opacity: 1; /* Show after 8 seconds */
+            opacity: 1; /* Show CTA after 8 seconds */
         }
 
         /* Gradient Rounded Button */
@@ -94,10 +94,15 @@
             background: linear-gradient(135deg, #222, #111);
         }
 
+        /* Bottom CTA Adjustment */
+        .cta-btn.mt-6 {
+            margin-top: 40px; /* Prevent overlap with paragraph text */
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero-overlay {
-                bottom: 3%;
+                bottom: 10%; /* Adjusted for smaller screens */
             }
 
             .cta-btn {
