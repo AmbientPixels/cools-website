@@ -35,10 +35,10 @@
             z-index: -1;
         }
 
-        /* CTA Button - No Background Container */
+        /* Hero CTA Button */
         .hero-overlay {
             position: absolute;
-            bottom: 5%; /* Moved further down */
+            bottom: 15%; /* Aligned perfectly with the video */
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
@@ -47,7 +47,7 @@
         }
 
         .hero-overlay.show {
-            opacity: 1; /* Show after 8 seconds */
+            opacity: 1; /* Show CTA after 8 seconds */
         }
 
         /* Gradient Rounded Button */
@@ -94,10 +94,23 @@
             background: linear-gradient(135deg, #222, #111);
         }
 
+        /* Bottom CTA Section */
+        .cta-section {
+            padding: 80px 20px; /* Added padding for space */
+            background: linear-gradient(135deg, #111, #000);
+        }
+
+        .cta-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* Space between text and button */
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero-overlay {
-                bottom: 3%;
+                bottom: 10%;
             }
 
             .cta-btn {
@@ -107,6 +120,10 @@
 
             .about-section h2 {
                 font-size: 2rem;
+            }
+
+            .cta-section {
+                padding: 60px 20px; /* Adjust spacing for mobile */
             }
         }
     </style>
@@ -149,11 +166,13 @@
         </div>
     </section>
 
-    <!-- Call-to-Action Section -->
-    <section class="section">
-        <h2 class="text-4xl font-bold">Join the $COOLS Movement 🚀</h2>
-        <p class="mt-4 text-lg">Don't just hold. STACK. 💎🙌</p>
-        <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn mt-6">STACK $COOLS NOW</a>
+    <!-- Call-to-Action Section (Fixed Overlap Issue) -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="text-4xl font-bold">Join the $COOLS Movement 🚀</h2>
+            <p class="mt-4 text-lg">Don't just hold. STACK. 💎🙌</p>
+            <a href="https://pump.fun/coin/Ak6sYoaZwUxmfsYscNeX9tiukUM67zqBxya5uuwqpump" class="cta-btn">STACK $COOLS NOW</a>
+        </div>
     </section>
 
     <!-- Footer -->
